@@ -5,9 +5,22 @@
     android:id="@+id/navigation"
     app:startDestination="@id/homeFragment">
 
+    <activity
+        android:id="@+id/splashScreen"
+        android:name="com.fulora.app.splash_screen.SplashScreenActivity"
+        tools:layout="@layout/activity_splash_screen"/>
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.fulora.app.home.ui.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"/>
+
+    <navigation
+        android:id="@+id/navigation_login"
+        app:startDestination="@id/onboardingActivity">
+
+    </navigation>
+
+
 </navigation>

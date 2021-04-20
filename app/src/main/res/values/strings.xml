@@ -14,10 +14,17 @@
     <string name="comecar">Começar</string>
     <string name="empty_text_plantation">Você não tem nada cadastrado ainda. Que tal adicionar?</string>
     <string name="criar_conta">Criar conta</string>
+    <string name="access_account">Acessar conta</string>
+    <string name="access">Acessar</string>
     <string name="nome">Nome</string>
     <string name="email">Email</string>
     <string name="senha">Senha</string>
     <string name="ou">OU</string>
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>
+    <string name="error_name">Nome errado</string>
+    <string name="error_email">E-mail errado</string>
+    <string name="error_password">Senha errada</string>
+    <string name="text_access_account">Já tem uma conta? <u>Acessar conta.</u></string>
+    <string name="text_create_account">Não tem uma conta? <u>Criar conta.</u></string>
 </resources>

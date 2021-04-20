@@ -10,11 +10,11 @@
         tools:context=".sign_in.SignInActivity">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/title_sign_in"
+            android:id="@+id/title_sign_up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
-            android:text="@string/access_account"
+            android:text="@string/criar_conta"
             android:textColor="@color/black"
             android:textSize="@dimen/_17sdp"
             android:textStyle="bold"
@@ -25,25 +25,45 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_8sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:fillViewport="true"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_sign_in">
+            app:layout_constraintTop_toBottomOf="@+id/title_sign_up">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/input_email"
+                    android:id="@+id/input_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_33sdp"
                     app:boxBackgroundColor="@color/design_default_color_background"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nome_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nome"
+                        android:inputType="textPersonName|textCapSentences"
+                        app:errorEnabled="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:boxBackgroundColor="@color/design_default_color_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/input_name"
+                    app:layout_constraintTop_toBottomOf="@+id/input_name">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/email_edit_text"
@@ -55,7 +75,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/input_password"
+                    android:id="@+id/input_senha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20sdp"
@@ -74,17 +94,17 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button_access_account"
+                    android:id="@+id/button_create_account"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_53sdp"
                     android:background="@drawable/ic_button_create_account"
-                    android:text="@string/access"
+                    android:text="@string/criar_conta"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/input_password" />
+                    app:layout_constraintTop_toBottomOf="@id/input_senha" />
 
                 <View
                     android:id="@+id/view"
@@ -122,7 +142,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/view2"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/view"
-                    app:layout_constraintTop_toBottomOf="@id/button_access_account" />
+                    app:layout_constraintTop_toBottomOf="@id/button_create_account" />
 
                 <LinearLayout
                     android:id="@+id/button_create_account_facebook"
@@ -136,7 +156,7 @@
                     android:gravity="center"
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toStartOf="@+id/button_create_account_google"
-                    app:layout_constraintStart_toStartOf="@+id/input_email"
+                    app:layout_constraintStart_toStartOf="@+id/input_name"
                     app:layout_constraintTop_toBottomOf="@+id/text_more_options">
 
                     <ImageView
@@ -151,7 +171,6 @@
                         android:layout_height="wrap_content"
                         android:text="@string/facebook"
                         android:textColor="@color/white" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -164,7 +183,7 @@
                     android:foregroundGravity="center"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/input_email"
+                    app:layout_constraintEnd_toEndOf="@+id/input_name"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/button_create_account_facebook"
                     app:layout_constraintTop_toTopOf="@+id/button_create_account_facebook">
@@ -185,11 +204,11 @@
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/text_create_account"
+                    android:id="@+id/text_sign_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_27sdp"
-                    android:text="@string/text_create_account"
+                    android:text="@string/text_access_account"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_12sdp"
                     app:layout_constraintEnd_toEndOf="@id/button_create_account_google"
